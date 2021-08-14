@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title>Weather App</title>
+		<meta name="description" content="This is my HTML5 boilerplate." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Georama:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+		<script src="./script/script.js"></script>
+		<script src="./script/dataHandler.js"></script>
+		<script src="./script/chart.js"></script>
+
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/screen.css" />
+	</head>
+	<body>
+		<div class="c-app js-gegevens" id="js-app">
+			<div class="c-app__img u-grid-column-8">
+				<img
+					id="js-bel"
+					class="c-app__img-bel"
+					src="./img/323291.png"
+					alt="België"
+				/>
+				<img
+					id="js-nl"
+					class="c-app__img-nl"
+					src="./img/323275.png"
+					alt="Nederland"
+				/>
+				<img
+					id="js-deu"
+					class="c-app__img-deu"
+					src="./img/197571.png"
+					alt="Duitsland"
+				/>
+			</div>
+			<div class="c-app__location u-grid-column-8">
+				<span id="js-naam" class="c-app__location-label">Covid statistics Belgium</span>
+				<hr class="u-border-line" />
+			</div>
+			<div class="c-app__a-cases u-grid-column-8">
+				<span id="js-a-cases" class="c-app__a-cases-label">+100</span>
+			</div>
+			<div class="c-app__chart u-grid-column-8">
+				<canvas id="myChart"></canvas>
+			</div>
+			<div class="c-app__selector u-grid-column-2">
+				<div class="c-info c-info__button-london">
+					<button id="js-m" class="c-link-cta">Month</button>
+				</div>
+			</div>
+			<div class="c-app__selector u-grid-column-2">
+				<div class="c-info c-info__button-brussels">
+					<button id="js-m6" class="c-link-cta">6 months</button>
+				</div>
+			</div>
+			<div class="c-app__selector u-grid-column-2">
+				<div class="c-info c-info__button-newyork">
+					<button id="js-y1" class="c-link-cta is-selected">
+						1 year
+					</button>
+				</div>
+			</div>
+			<div class="c-app__selector u-grid-column-2">
+				<div class="c-info c-info__button-lasvegas">
+					<button id="js-y2" class="c-link-cta" data-value="2442047">
+						2 year
+					</button>
+				</div>
+			</div>
+			<div class="c-app__weekavg u-grid-column-8">
+				<span class="c-app__week-label">Averages last 7 days</span>
+				<hr class="u-border-line" />
+			</div>
+			<div class="c-app__week u-grid-column-8">
+				<div class="c-app__leeg u-grid-column-1">
+					<span></span>
+				</div>
+				<div class="c-app__amount u-grid-column-1">
+					<span class="c-app__cases-label">AVG amount PD</span>
+				</div>
+				<div class="c-app__lastweek u-grid-column-1">
+					<span class="c-app__cases-label">% C/T last Week</span>
+				</div>
+				<div class="c-app__cases u-grid-column-1">
+					<span class="c-app__cases-label">Cases</span>
+				</div>
+				<div id="js-avgcases" class="c-app__cijfers u-grid-column-1">11</div>
+				<div id="js-avgcasesper" class="c-app__cijfers u-grid-column-1">+10%</div>
+				<div class="c-app__deaths u-grid-column-1">
+					<span class="c-app__cases-label">Deaths</span>
+				</div>
+				<div id="js-avgdeaths" class="c-app__cijfers u-grid-column-1">11</div>
+				<div id="js-avgdeathsper" class="c-app__cijfers u-grid-column-1">+10%</div>
+			</div>
+		</div>
+	</body>
+</html>

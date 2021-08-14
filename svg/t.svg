@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="225" viewBox="0 0 52 45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="cloud_thunder" data-name="cloud, thunder" class="cls-1" d="M436,474h-8.444l2.666-3H436a7,7,0,1,0-1.122-13.887A13.488,13.488,0,1,0,408,455.5c0,0.03,0,.059,0,0.089a8.027,8.027,0,1,0-2,15.331V471h7v3h-7v-0.057c-0.33.03-.662,0.057-1,0.057a11,11,0,0,1,0-22c0.127,0,.25.015,0.375,0.019a16.49,16.49,0,0,1,32.559,2.172A10,10,0,0,1,436,474Zm-11-24v14h7l-16,20V469h-7Zm-6,16v10l7-9h-4v-9l-7,8h4Z" transform="translate(-394 -439)"/>
+</svg>
