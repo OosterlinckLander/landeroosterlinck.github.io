@@ -350,6 +350,10 @@ input::placeholder {
 	font-size: 1rem; /* 1rem = 1 font-size van de body */
 }
 
+.is-selected-land {
+	border-bottom: 2px solid white;
+}
+
 .c-app {
 	justify-content: center;
 	align-content: center;
@@ -505,6 +509,18 @@ h2 {
 }
 */
 
+.c-app__img-bel:hover {
+	border-bottom: 2px solid #a38a89;
+}
+
+.c-app__img-nl:hover {
+	border-bottom: 2px solid #a38a89;
+}
+
+.c-app__img-deu:hover {
+	border-bottom: 2px solid #a38a89;
+}
+
 .c-info_week {
 	background-color: #000;
 }
@@ -527,8 +543,78 @@ h2 {
 	}
 
 	.c-app__a-cases {
-		margin-top: 16px;
+		margin-top: 10px;
 	}
+
+	.tooltip-cases {
+		font-size: 16px;
+	}
+
+	.tooltip-ct {
+		font-size: 16px;
+	}
+
+	.tooltip-pd {
+		font-size: 16px;
+	}
+
+	.c-app__a-cases .tooltip-cases {
+		visibility: hidden;
+		width: 120px;
+		background-color: black;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;
+
+		/* Position the tooltip */
+		position: absolute;
+		z-index: 1;
+	}
+
+	.c-app__a-cases:hover .tooltip-cases {
+		visibility: visible;
+	}
+
+	.c-app__lastweek .tooltip-ct {
+		visibility: hidden;
+		width: 140px;
+		margin-right: 260px;
+		background-color: black;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;
+
+		/* Position the tooltip */
+		position: absolute;
+		z-index: 1;
+	}
+
+	.c-app__lastweek:hover .tooltip-ct {
+		visibility: visible;
+	}
+
+	.c-app__amount .tooltip-pd {
+		visibility: hidden;
+		margin-left: 220px;
+		width: 100px;
+		background-color: black;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;
+
+		/* Position the tooltip */
+		position: absolute;
+		z-index: 1;
+	}
+
+	.c-app__amount:hover .tooltip-pd {
+		visibility: visible;
+	}
+
+	
 
 	.c-app__week {
 		display: grid;

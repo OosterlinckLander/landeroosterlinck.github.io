@@ -31,7 +31,7 @@
 				/>
 				<img
 					id="js-nl"
-					class="c-app__img-nl"
+					class="c-app__img-nl is-selected-land"
 					src="./img/323275.png"
 					alt="Nederland"
 				/>
@@ -46,8 +46,9 @@
 				<span id="js-naam" class="c-app__location-label">Covid statistics Belgium</span>
 				<hr class="u-border-line" />
 			</div>
-			<div class="c-app__a-cases u-grid-column-8">
-				<span id="js-a-cases" class="c-app__a-cases-label">+100</span>
+			<div id="js-a-cases" class="c-app__a-cases c-app__a-cases-label u-grid-column-8">
+				+100
+				<span class="tooltip-cases">Cases Yesterday</span>
 			</div>
 			<div class="c-app__chart u-grid-column-8">
 				<canvas id="myChart"></canvas>
@@ -84,11 +85,13 @@
 				<div class="c-app__leeg u-grid-column-1">
 					<span></span>
 				</div>
-				<div class="c-app__amount u-grid-column-1">
-					<span class="c-app__cases-label">AVG amount PD</span>
+				<div class="c-app__amount c-app__cases-label u-grid-column-1">
+					AVG amount PD
+					<span class="tooltip-pd">PD = Perday</span>
 				</div>
-				<div class="c-app__lastweek u-grid-column-1">
-					<span class="c-app__cases-label">% C/T last Week</span>
+				<div class="c-app__lastweek c-app__cases-label u-grid-column-1">
+					% C/T last Week
+					<span class="tooltip-ct">C/T = Compared To</span>
 				</div>
 				<div class="c-app__cases u-grid-column-1">
 					<span class="c-app__cases-label">Cases</span>

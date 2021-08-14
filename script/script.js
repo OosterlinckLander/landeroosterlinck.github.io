@@ -115,7 +115,10 @@ const VerwerkData = function (data)
     <span id="js-naam" class="c-app__location-label">Covid statistics ${naam}</span>
     `
     htmlcodeacases = `
-    <span id="js-a-cases" class="c-app__a-cases-label">+${acases}</span>
+    <div id="js-a-cases" class="c-app__a-cases c-app__a-cases-label u-grid-column-8">
+				+${acases}
+				<span class="tooltip-cases">Cases Yesterday</span>
+	</div>
     `
     htmlcodeavgcases = `
     <div id="js-avgcases" class="c-app__cijfers u-grid-column-1">${avgcases}</div>
@@ -240,6 +243,11 @@ const init = function(){
         document.getElementById('js-m').classList.remove('is-selected');
         document.getElementById('js-m6').classList.remove('is-selected');
         document.getElementById('js-y2').classList.remove('is-selected');
+        
+        document.getElementById('js-bel').classList.remove('is-selected-land')
+        document.getElementById('js-bel').classList.add('is-selected-land')
+        document.getElementById('js-nl').classList.remove('is-selected-land')
+        document.getElementById('js-deu').classList.remove('is-selected-land')
     })
     document.getElementById('js-nl').addEventListener('click', function() {
         isoland = "NLD";
@@ -249,6 +257,11 @@ const init = function(){
         document.getElementById('js-m').classList.remove('is-selected');
         document.getElementById('js-m6').classList.remove('is-selected');
         document.getElementById('js-y2').classList.remove('is-selected');
+
+        document.getElementById('js-nl').classList.remove('is-selected-land')
+        document.getElementById('js-nl').classList.add('is-selected-land')
+        document.getElementById('js-bel').classList.remove('is-selected-land')
+        document.getElementById('js-deu').classList.remove('is-selected-land')
     })
     document.getElementById('js-deu').addEventListener('click', function() {
         isoland = "DEU";
@@ -258,6 +271,11 @@ const init = function(){
         document.getElementById('js-m').classList.remove('is-selected');
         document.getElementById('js-m6').classList.remove('is-selected');
         document.getElementById('js-y2').classList.remove('is-selected');
+
+        document.getElementById('js-deu').classList.remove('is-selected-land')
+        document.getElementById('js-deu').classList.add('is-selected-land')
+        document.getElementById('js-nl').classList.remove('is-selected-land')
+        document.getElementById('js-bel').classList.remove('is-selected-land')
     })
 }
 
