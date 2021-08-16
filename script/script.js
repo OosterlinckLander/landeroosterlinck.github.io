@@ -181,7 +181,7 @@ const VerwerkData = function (data)
 
 const getData = function (datum, iso){
     handleData(
-        `https://covidapi.info/api/v1/country/${iso}/timeseries/${datum}/2021-08-08`,
+        `https://covidapi.info/api/v1/country/${iso}/timeseries/${datum}/2021-08-16`,
         VerwerkData
     )
 }
@@ -196,7 +196,7 @@ const init = function(){
     DOMavgdeathsper = document.getElementById('js-avgdeathsper');
     getData('2020-08-01',isoland);
     document.getElementById('js-m').addEventListener('click', function () {   
-        getData('2021-07-01', isoland)
+        getData('2021-07-15', isoland)
         //document.getElementById('loader-wrapper').style.display = "flex"; 
         //Loader();
         document.getElementById('js-m').classList.remove('is-selected');
