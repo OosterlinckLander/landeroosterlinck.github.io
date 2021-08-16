@@ -12,6 +12,7 @@
 	--color-alpha-light: #a5a4bf;
 	--color-alpha: #a3a0fb;
 	--color-alpha-dark: #0e2338;
+	--color-alpha-10-dark: #0d0d0d;
 
 	--color-neutral-light: white;
 	--color-neutral: ;
@@ -44,16 +45,15 @@
 	--transition: all 0.2s ease;
 
 	/* font-sizes*/
-    --root-font-size: 4px;
+	--root-font-size: 4px;
 
-    --regular: 400;
-    --bold: 700;
+	--light: 300;
+	--regular: 400;
+	--medium: 500;
+	--bold: 700;
 
 	/* whitespace */
 	--global-baseline: 4px;
-
-	--layout-sidebar-width: 260px;
-	--layout-header-height: 70px;
 }
 
 /*------------------------------------*\
@@ -336,6 +336,96 @@ input::placeholder {
 \*------------------------------------*/
 
 /*
+  landingpage
+*/
+
+.c-landing__kop {
+	text-align: center;
+}
+
+.c-landing__tekst {
+	margin-top: calc(var(--global-baseline) * 6);
+	border: none;
+	background-color: var(--color-alpha-10-dark);
+	padding: calc(var(--global-baseline) * 5);
+	border-radius: 24px;
+	margin-bottom: calc(var(--global-baseline) * 6);
+	text-align: justify;
+}
+
+.c-landing__sign-up {
+	font-weight: var(--bold);
+	text-align: left;
+}
+
+.c-landing__subtitle {
+	text-align: justify;
+	font-weight: var(--bold);
+}
+
+.c-landing__mock-up {
+	margin-top: 20px;
+	justify-content: center;
+	align-content: center;
+}
+
+.c-landing__img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+.c-landing__form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.c-landing__input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	align-self: center;
+	text-align: start;
+	padding-top: calc(var(--global-baseline) * 3);
+	outline: none;
+	width: 100%;
+	font-family: inherit;
+	font-size: calc(var(--root-font-size) * 4);
+	line-height: calc(var(--root-font-size) * 6);
+	padding: 11px 16px; /*verticaal 1+11+24+11+1 */
+	color: var(--color-alpha-10-dark);
+	border: 1px solid #e2e3e7;
+	border-radius: 4px;
+}
+
+.c-landing__input::placeholder {
+	color: #808080;
+}
+
+.c-landing__button {
+	align-self: end;
+	width: 35%;
+	padding: 11px 0;
+	text-align: center;
+	color: #fff;
+	font-weight: var(--bold);
+	border: 1px solid var(--global-neutral-20-dark);
+	border-radius: 10px;
+	background: var(--global-neutral-10-dark);
+	outline: none;
+	transition: all 0.1s ease-out;
+	font-size: calc(var(--root-font-size) * 4);
+	line-height: calc(var(--root-font-size) * 6);
+}
+
+.c-img__vandaag {
+	height: 360px;
+	width: 360px;
+}
+
+/*
     Component: Logo
     ---
     Website main logo
@@ -446,6 +536,16 @@ h2 {
 		margin: auto;
 		grid-template-columns: repeat(8, 1fr);
 		grid-template-rows: 80px 40px 32px 430px 40px 70px 180px 40px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.c-landing {
+		display: grid;
+		max-width: 90%;
+		margin: auto;
+		grid-template-columns: 1fr;
+		grid-template-rows: 600px 480px 40px;
 		justify-content: center;
 		align-items: center;
 	}
@@ -628,6 +728,12 @@ h2 {
 		max-width: 80%;
 	}
 
+	.c-landing__img {
+		width: 55%;
+		max-width: 280px;
+		padding-right: 10px;
+	}
+
 	.c-app__chart{
 		width: 300px;
 		margin: auto;
@@ -661,6 +767,21 @@ h2 {
 		width: 400px;
 	}
 
+	.c-landing {
+		display: grid;
+		max-width: 98%;
+		margin: auto;
+		grid-template-columns: 500px 1fr;
+	}
+
+	.c-landing__img {
+		margin-top: calc(var(--global-baseline) * 6);
+		width: 100%;
+		max-height: 440px;
+		max-width: 200px;
+		margin-top: -4px;
+	}
+
 	.u-border-line {
         width: 25% !important;
     }
@@ -675,6 +796,20 @@ h2 {
 		width: 500px;
 	}
 
+	.c-landing__img {
+		margin-top: -4px;
+		width: 240px;
+		margin-left: 24px;
+		max-height: 440px;
+	}
+
+	.c-landing {
+		display: grid;
+		max-width: 65%;
+		margin: auto;
+		grid-template-columns: 500px 1fr;
+	}
+
 	.u-border-line {
         width: 20% !important;
     }
@@ -687,6 +822,20 @@ h2 {
 
 	.c-app__chart{
 		width: 600px;
+	}
+
+	.c-landing__img {
+		margin-top: -4px;
+		width: 240px;
+		max-height: 450px;
+		margin-left: 24px;
+	}
+
+	.c-landing {
+		display: grid;
+		max-width: 50%;
+		margin: auto;
+		grid-template-columns: 500px 1fr;
 	}
 
 	.u-border-line {
