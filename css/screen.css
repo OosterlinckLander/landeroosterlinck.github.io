@@ -10,12 +10,11 @@
 	/* colors */
 	--color-alpha-10-light: #f0f0f7;
 	--color-alpha-light: #a5a4bf;
-	--color-alpha: #a3a0fb;
+	--color-alpha: #a38a89;
 	--color-alpha-dark: #0e2338;
 	--color-alpha-10-dark: #0d0d0d;
 
 	--color-neutral-light: white;
-	--color-neutral: ;
 	--color-neutral-dark: #4d4f5c;
 	--color-neutral-10-dark: #3b3b53;
 
@@ -32,7 +31,6 @@
 	--global-neutral-dark: #757586;
 	--global-neutral-dark-opacity: rgba(117, 117, 134, 0.2);
 
-	--background-color: white;
 
 	/* Shadows */
 	--shadow-neutral: 0 2px 6px rgba(0, 0, 0, 0.04);
@@ -408,10 +406,10 @@ input::placeholder {
 	width: 35%;
 	padding: 11px 0;
 	text-align: center;
-	color: #fff;
+	color: var(--color-neutral-light);
 	font-weight: var(--bold);
 	border: 1px solid var(--global-neutral-20-dark);
-	border-radius: 10px;
+	border-radius: calc(var(--root-radius)*2);
 	background: var(--global-neutral-10-dark);
 	outline: none;
 	transition: all 0.1s ease-out;
@@ -429,15 +427,6 @@ input::placeholder {
     ---
     Website main logo
 */
-.c-logo {
-	margin: 0;
-
-	text-transform: uppercase;
-	color: var(--color-neutral-light);
-
-	line-height: calc(var(--baseline) * 4);
-	font-size: 1rem; /* 1rem = 1 font-size van de body */
-}
 
 .is-selected-land {
 	border-bottom: 2px solid white;
@@ -452,80 +441,70 @@ input::placeholder {
 .c-app__img-bel {
 	width: 50px;
 	height: 50px;
-	margin-right: 10px;
+	margin-right: calc(var(--global-baseline)*2.5);
 	padding-bottom: 1px;
 }
 
 .c-app__img-nl {
 	width: 50px;
 	height: 50px;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: calc(var(--global-baseline)*2.5);
+	margin-right: calc(var(--global-baseline)*2.5);
 	padding-bottom: 1px;
 }
 
 .c-app__img-deu {
 	width: 50px;
 	height: 50px;
-	margin-left: 10px;
+	margin-left: calc(var(--global-baseline)*2.5);
 	padding-bottom: 1px;
 }
 
 .c-app__location-label {
-	font-weight: 500;
-	font-size: 24px;
+	font-weight: var(--medium);
+	font-size: calc(var(--root-font-size)*6);
 }
 
 .c-app__a-cases-label {
-	font-size: 20px;
-	font-weight: 300;
-	color: #BA463F;
+	font-size: calc(var(--root-font-size)*5);
+	font-weight: var(--light);
+	color: var(--global-color-beta);
 }
 
 .c-app__week-label {
-	font-weight: 500;
-	font-size: 24px;
-	margin-bottom: 24px;
+	font-weight: var(--medium);
+	font-size: calc(var(--root-font-size)*6);
+	margin-bottom: calc(var(--global-baseline)*6);
 	text-align: center;
 }
 
 .c-app__cases-label {
-	font-weight: 400;
-	font-size: 16px;
-}
-
-h2 {
-	font-size: 14px;
-	padding-left: 100px;
-	padding-right: 100px;
-	line-height: 20px;
+	font-weight: var(--regular);
+	font-size: calc(var(--root-font-size)*4);
 }
 
 .c-app__img-bel:hover {
-	border-bottom: 2px solid #a38a89;
+	border-bottom: 2px solid var(--color-alpha);
 	padding-bottom: 1px;
 	cursor: pointer;
 }
 
 .c-app__img-nl:hover {
-	border-bottom: 2px solid #a38a89;
+	border-bottom: 2px solid var(--color-alpha);
 	padding-bottom: 1px;
 	cursor: pointer;
 }
 
 .c-app__img-deu:hover {
-	border-bottom: 2px solid #a38a89;
+	border-bottom: 2px solid var(--color-alpha);
 	padding-bottom: 1px;
 	cursor: pointer;
 }
 
-.c-info_week {
-	background-color: #000;
-}
 
 .c-app__chart {
 	text-align: center;
-	margin-top: 12px;
+	margin-top: calc(var(--global-baseline)*3);
 }
 
 @media screen and (min-width: 320px) {
@@ -550,31 +529,31 @@ h2 {
 	}
 
 	.c-app__location-label {
-		font-weight: 500;
-		font-size: 22px;
+		font-weight: var(--medium);
+		font-size: calc(var(--root-font-size) * 5.5);
 	}
 
 	.c-app__a-cases {
-		margin-top: 10px;
+		margin-top: calc(var(--global-baseline)*2.5);
 	}
 
 	.tooltip-cases {
-		font-size: 16px;
+		font-size: calc(var(--root-font-size) * 4);
 	}
 
 	.tooltip-ct {
-		font-size: 16px;
+		font-size: calc(var(--root-font-size) * 4);
 	}
 
 	.tooltip-pd {
-		font-size: 16px;
+		font-size: calc(var(--root-font-size) * 4);
 	}
 
 	.c-app__a-cases .tooltip-cases {
 		visibility: hidden;
 		width: 120px;
 		background-color: black;
-		color: #fff;
+		color: var(--global-neutral-light);
 		text-align: center;
 		border-radius: 6px;
 		padding: 5px 0;
@@ -593,7 +572,7 @@ h2 {
 		width: 140px;
 		margin-right: 260px;
 		background-color: black;
-		color: #fff;
+		color: var(--global-neutral-light);
 		text-align: center;
 		border-radius: 6px;
 		padding: 5px 0;
@@ -630,7 +609,7 @@ h2 {
 		display: grid;
 		grid-template-columns: 80px 1fr 1fr;
 		grid-template-rows: 50px 50px 50px;
-		background-color: #212634;
+		background-color: var(--global-neutral-20-dark);
 		width: 85%;
 		justify-content: center;
 		align-items: center;
@@ -651,7 +630,7 @@ h2 {
 		align-items: center;
 		width: 100%;
 		height: 100%;
-		background: #151716;
+		background: var(--color-alpha-10-dark);
 		border-right: 2.5px solid var(--color-alpha);
 		border-bottom: 2.5px solid var(--color-alpha);
 		border-left: 2.5px solid var(--color-alpha);
@@ -663,7 +642,7 @@ h2 {
 		align-items: center;
 		width: 100%;
 		height: 100%;
-		background: #151716;
+		background: var(--color-alpha-10-dark);
 		border-right: 2.5px solid var(--color-alpha);
 		border-bottom: 2.5px solid var(--color-alpha);
 		border-left: 2.5px solid var(--color-alpha);
@@ -675,7 +654,7 @@ h2 {
 		align-items: center;
 		width: 100%;
 		height: 100%;
-		background: #151716;
+		background: var(--color-alpha-10-dark);
 		border-right: 2.5px solid var(--color-alpha);
 		border-bottom: 2.5px solid var(--color-alpha);
 		border-top: 2.5px solid var(--color-alpha);
@@ -697,24 +676,24 @@ h2 {
 		align-items: center;
 		width: 100%;
 		height: 100%;
-		background: #151716;
+		background:var(--color-alpha-10-dark);
 		border-right: 2.5px solid var(--color-alpha);
 		border-bottom: 2.5px solid var(--color-alpha);
 		border-top: 2.5px solid var(--color-alpha);
 	}
 	
 	.c-app__weekavg {
-		padding-top: 20px;
+		padding-top: calc(var(--global-baseline)*5);
 	}
 
 	.c-app__img {
-		margin-top: 16px;
-		margin-bottom: 16px;
+		margin-top: calc(var(--global-baseline)*4);
+		margin-bottom: calc(var(--global-baseline)*4);
 	}
 
 	.c-app__chart {
 		text-align: center;
-		margin-top: 12px;
+		margin-top: calc(var(--global-baseline)*3);
 		width: 300px;
 		height: 400px;
 		position: relative;
@@ -730,7 +709,7 @@ h2 {
 	.c-landing__img {
 		width: 55%;
 		max-width: 280px;
-		padding-right: 10px;
+		padding-right: calc(var(--global-baseline)*2.5);
 	}
 
 	.c-app__chart{
@@ -744,12 +723,12 @@ h2 {
 
 	.c-app__location-label {
 		font-weight: 500;
-		font-size: 24px;
+		font-size: calc(var(--root-font-size)*6);
 	}
 
 	.c-img {
-		width: 24px;
-		height: 24px;
+		width: calc(var(--global-baseline)*6);
+		height: calc(var(--global-baseline)*6);
 	}
 
 	.u-border-line {
@@ -798,7 +777,7 @@ h2 {
 	.c-landing__img {
 		margin-top: -4px;
 		width: 240px;
-		margin-left: 24px;
+		margin-left: calc(var(--global-baseline) * 6);
 		max-height: 440px;
 	}
 
@@ -827,7 +806,7 @@ h2 {
 		margin-top: -4px;
 		width: 240px;
 		max-height: 450px;
-		margin-left: 24px;
+		margin-left: calc(var(--global-baseline) * 6);
 	}
 
 	.c-landing {
