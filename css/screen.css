@@ -1,7 +1,7 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -360,16 +360,6 @@ input::placeholder {
 	justify-items: center;
 }
 
-.c-app__selector {
-	margin-top: 16px;
-	align-self: start;
-	justify-self: center;
-}
-
-.white {
-	color: #fff;
-}
-
 .c-app__img-bel {
 	width: 50px;
 	height: 50px;
@@ -415,102 +405,12 @@ input::placeholder {
 	font-size: 16px;
 }
 
-.c-app_latlong {
-	margin-top: 16px;
-	font-weight: 400;
-	font-size: 18px;
-}
-
-.c-app__logo {
-	display: flex;
-	align-items: center;
-	padding: calc(var(--baseline) * 5) calc(var(--baseline) * 4);
-	background: var(--color-neutral-10-dark);
-}
-
-.c-app__sidebar {
-	background: var(--color-neutral-dark);
-	box-shadow: var(--shadow-neutral);
-	display: none;
-}
-
-.c-app__topbar {
-	background: var(--color-neutral-light);
-	box-shadow: var(--shadow-neutral);
-	display: none;
-}
-
-.c-label-v {
-	font-size: 26px;
-	line-height: 32px;
-	margin: 0 0 24px;
-}
-
 h2 {
 	font-size: 14px;
 	padding-left: 100px;
 	padding-right: 100px;
 	line-height: 20px;
 }
-
-.c-card {
-	box-shadow: 0 2 6 rgba(0, 0, 0, 0, 0.04);
-}
-
-.c-card__header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
-	font-size: 18px;
-	color: var(--color-neutral-dark);
-}
-
-.c-custom-select {
-	border-radius: 4px;
-	border-color: #d7dae2;
-	color: #4d4f5c;
-	width: 130px;
-	height: 32px;
-	padding-left: 12px;
-}
-
-/*
-.c-app__tomorrow {
-	padding-top: 20px;
-	display: grid;
-	grid-template-columns: 200px 1fr 200px;
-	grid-template-rows: 60px 60px 60px;
-	background-color: #000;
-	margin-bottom: 25px;
-}
-
-.c-app__tomorrow-label {
-	justify-self: end;
-	margin-right: 20px;
-	align-self: start;
-}
-
-.c-app__tomorrow-temp {
-	justify-self: center;
-	align-self: center;
-	margin-left: 50px;
-}
-
-.c-app__tomorrow-voor {
-	justify-self: center;
-	align-self: start;
-	margin-top: 6px;
-	margin-left: -10px;
-}
-
-.c-app__daylabel {
-	font-size: 26px;
-	line-height: 32px;
-	font-weight: 700;
-	margin: 0 0 24px;
-}
-*/
 
 .c-app__img-bel:hover {
 	border-bottom: 2px solid #a38a89;
@@ -545,10 +445,14 @@ h2 {
 		max-width: 90%;
 		margin: auto;
 		grid-template-columns: repeat(8, 1fr);
-		/*grid-template-rows: 70px 40px 400px 60px 40px 40px 1fr;*/
-		grid-template-rows: 80px 40px 32px 430px 40px 70px 180px 40px 40px 1fr;
+		grid-template-rows: 80px 40px 32px 430px 40px 70px 180px 40px;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.c-app__location-label {
+		font-weight: 500;
+		font-size: 22px;
 	}
 
 	.c-app__a-cases {
@@ -623,11 +527,9 @@ h2 {
 		visibility: visible;
 	}
 
-	
-
 	.c-app__week {
 		display: grid;
-		grid-template-columns: 100px 1fr 1fr;
+		grid-template-columns: 80px 1fr 1fr;
 		grid-template-rows: 50px 50px 50px;
 		background-color: #212634;
 		width: 85%;
@@ -702,8 +604,6 @@ h2 {
 		border-top: 2.5px solid var(--color-alpha);
 	}
 	
-	
-
 	.c-app__weekavg {
 		padding-top: 20px;
 	}
@@ -721,65 +621,6 @@ h2 {
 		position: relative;
 	}
 
-	.c-app__tomorrow {
-		padding-top: 20px;
-		display: grid;
-		grid-template-columns: 120px 1fr 1fr 60px;
-		grid-template-rows: 50px 50px 50px 50px 50px;
-		background-color: #000;
-		margin-bottom: 25px;
-	}
-
-	.c-label-v {
-		font-size: 18px;
-		line-height: 18px;
-		margin: 0 0;
-		text-align: center;
-	}
-
-	.c-app__daylabel {
-		font-size: 18px;
-		line-height: 24px;
-		font-weight: 700;
-	}
-
-	.c-app__tomorrow-label {
-		justify-self: start;
-		margin-left: 12px;
-		align-self: start;
-	}
-	
-	.c-app__tomorrow-temp1 {
-		justify-self: end;
-		padding-right: 6px;
-		margin-top: 3px;
-		align-self: start;
-		text-align: center;
-		border-right: 1px #fff solid;
-	}
-
-	.c-app__tomorrow-temp2 {
-		justify-self: start;
-		padding-left: 5px;
-		margin-top: 3px;
-		text-align: center;
-		align-self: start;
-	}
-	
-	.c-app__tomorrow-voor {
-		justify-self: center;
-		align-self: start;
-		margin-left: -6px;
-	}
-
-	.c-app__icon{
-		margin-top: -32px;
-	}
-
-	.c-img {
-		width: 20px;
-		height: 20px;
-	}
 }
 
 @media screen and (min-width: 480px) {
@@ -792,48 +633,13 @@ h2 {
 		margin: auto;
 	}
 
-	.c-app__tomorrow {
-		padding-top: 20px;
-		display: grid;
-		grid-template-columns: 150px 1fr 1fr 100px;
-		grid-template-rows: 50px 50px 50px 50px 50px;
-		background-color: #000;
-		margin-bottom: 25px;
+	.c-app__week {
+		grid-template-columns: 100px 1fr 1fr;
 	}
 
-	.c-app__tomorrow-voor {
-		justify-self: end;
-		align-self: start;
-		margin-right: 24px;
-	}
-
-	.c-app__tomorrow-label {
-		justify-self: start;
-		margin-left: 24px;
-		align-self: start;
-	}
-
-	.c-label-v {
-		font-size: 20px;
-		line-height: 20px;
-		margin: 0 0;
-		text-align: center;
-	}
-
-	.c-app__daylabel {
-		font-size: 20px;
-		line-height: 26px;
-		font-weight: 700;
-	}
-
-	.c-app__tomorrow-temp1 {
-		justify-self: end;
-		padding-right: 6px;
-		margin-top: 3px;
-		padding-left: 10px;
-		align-self: start;
-		text-align: center;
-		border-right: 1px #fff solid;
+	.c-app__location-label {
+		font-weight: 500;
+		font-size: 24px;
 	}
 
 	.c-img {
@@ -853,51 +659,6 @@ h2 {
 
 	.c-app__chart{
 		width: 400px;
-	}
-
-	.c-app__tomorrow {
-		padding-top: 20px;
-		display: grid;
-		grid-template-columns: 190px 1fr 1fr 130px;
-		grid-template-rows: 50px 50px 50px 50px 50px;
-		background-color: #000;
-		margin-bottom: 25px;
-	}
-
-	.c-app__tomorrow-temp1 {
-		justify-self: end;
-		padding-right: 12px;
-		margin-top: 3px;
-		padding-left: 20px;
-		align-self: start;
-		text-align: center;
-		border-right: 1px #fff solid;
-	}
-	
-	.c-label-v {
-		font-size: 24px;
-		line-height: 24px;
-		margin: 0 0;
-		text-align: center;
-	}
-
-	.c-app__daylabel {
-		font-size: 24px;
-		line-height: 30px;
-		font-weight: 700;
-	}
-
-	.c-app__tomorrow-temp2 {
-		justify-self: start;
-		padding-left: 11px;
-		margin-top: 3px;
-		text-align: center;
-		align-self: start;
-	}
-
-	.c-img {
-		width: 30px;
-		height: 30px;
 	}
 
 	.u-border-line {
@@ -931,39 +692,6 @@ h2 {
 	.u-border-line {
         width: 20% !important;
     }
-}
-
-.c-icon {
-	height: 1rem;
-	width: 1rem;
-	fill: var(--local-color-alpha-light);
-}
-
-.c-main-nav__list {
-	margin: 0;
-	padding: 0;
-}
-
-.c-main-nav__item {
-	display: flex;
-	align-items: center;
-	color: var(--color-alpha-10-light);
-	padding: calc(var(--baseline) * 3) calc(var(--baseline) * 4);
-	transition: all ease-in-out 0.1s;
-
-	--local-color-alpha-light: var(--color-alpha-light);
-}
-
-.c-main-nav__link {
-	margin-left: calc(var(--baseline) * 2);
-	color: var(--color-neutral-light);
-	font-size: 1rem;
-	line-height: calc(var(--baseline) * 5);
-	text-decoration: none;
-}
-
-.c-main-nav__link:visited {
-	color: var(--color-neutral-light);
 }
 
 .is-selected,
@@ -1237,22 +965,6 @@ No media query since this is the default in mobile first design
 #Buttons
 \*------------------------------------*/
 
-.c-info__button-london {
-    text-align: center;
-}
-
-.c-info__button-brussels {
-    text-align: center;
-}
-
-.c-info__button-newyork {
-    text-align: center;
-}
-
-.c-info__button-lasvegas {
-    text-align: center;
-}
-
 .c-link-cta {
     background: transparent;
     border: 0;
@@ -1291,7 +1003,6 @@ No media query since this is the default in mobile first design
     background-color: var(--global-neutral-5-dark);
     color: var(--global-neutral-color);
     box-shadow: var(--shadow-button);
-    
 }
 
 .c-link-cta:active {
@@ -1303,48 +1014,3 @@ No media query since this is the default in mobile first design
     background-color: var(--global-neutral-5-dark);
     color: var(--global-neutral-color);
 }
-
-/*
-Test
-*/
-
-.loader-wrapper {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color:var(--color-alpha-dark);
-	display:flex;
-	justify-content: center;
-	align-items: center;
-  }
-  .loader {
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	position: relative;
-	border: 4px solid #Fff;
-	animation: loader 2s infinite ease;
-  }
-  .loader-inner {
-	vertical-align: top;
-	display: inline-block;
-	width: 100%;
-	background-color: #fff;
-	animation: loader-inner 2s infinite ease-in;
-  }
-  @keyframes loader {
-	0% { transform: rotate(0deg);}
-	25% { transform: rotate(180deg);}
-	50% { transform: rotate(180deg);}
-	75% { transform: rotate(360deg);}
-	100% { transform: rotate(360deg);}
-  }
-  @keyframes loader-inner {
-	0% { height: 0%;}
-	25% { height: 0%;}
-	50% { height: 100%;}
-	75% { height: 100%;}
-	100% { height: 0%;}
-  }
