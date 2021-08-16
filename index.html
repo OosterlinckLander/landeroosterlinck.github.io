@@ -34,13 +34,13 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 		<script src="./script/script.js"></script>
 		<script src="./script/dataHandler.js"></script>
-		<script src="./script/chart.js"></script>
+		<script src="./script/counter.js"></script>
 
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/screen.css" />
 	</head>
 	<body>
-		<div class="c-app js-gegevens" id="js-app">
+		<div class="c-app" id="js-app">
 			<div class="c-app__img u-grid-column-8">
 				<img
 					id="js-bel"
@@ -65,8 +65,9 @@
 				<span id="js-naam" class="c-app__location-label">Covid statistics </span>
 				<hr class="u-border-line" />
 			</div>
-			<div id="js-a-cases" class="c-app__a-cases c-app__a-cases-label u-grid-column-8">
-				+100
+			<div class="c-app__a-cases c-app__a-cases-label u-grid-column-8">
+				+
+				<span class="js-a-cases c-app__a-cases-label"></span>
 				<span class="tooltip-cases">Cases Yesterday</span>
 			</div>
 			<div class="c-app__chart u-grid-column-8">

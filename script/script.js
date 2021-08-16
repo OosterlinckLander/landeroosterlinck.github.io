@@ -2,23 +2,26 @@ let DOMnaam, DOMacases, DOMavgcases, DOMavgcasesper, DOMavgdeaths, DOMavgdeathsp
 window.myChart;
 let isoland;
 
-/*
-const VerwerkData = function (data){
-    console.log(data.timeline);
-    let Timeline = data.timeline;
-    console.log(Timeline.cases);
-    let Cases = Timeline.cases;
-    console.log(Cases["1/4/21"]);
-    const d = new Date();
-    console.log(d.getUTCDay());
+const verwerkCases = function (data) {
+    Result = data.result;
 
+    let cases = [];
+
+    for(let i = 0; i < Result.length; i++){
+        cases[i] = Result[i].confirmed;
+    }
+
+    let hulp = cases.length - 1;
+    let hulp2 = cases.length - 2;
+
+    let acases = cases[hulp] - cases[hulp2];
+
+    countUp(0, acases, "js-a-cases");
 }
-*/
 
 const VerwerkData = function (data)
 {
     let htmlcodeNaam = '';
-    let htmlcodeacases = '';
     let htmlcodeavgcases = '';
     let htmlcodeavgcasesper = '';
     let htmlcodeavgdeaths = '';
@@ -114,12 +117,6 @@ const VerwerkData = function (data)
     htmlcodeNaam = `
     <span id="js-naam" class="c-app__location-label">Covid statistics ${naam}</span>
     `
-    htmlcodeacases = `
-    <div id="js-a-cases" class="c-app__a-cases c-app__a-cases-label u-grid-column-8">
-				+${acases}
-				<span class="tooltip-cases">Cases Yesterday</span>
-	</div>
-    `
     htmlcodeavgcases = `
     <div id="js-avgcases" class="c-app__cijfers u-grid-column-1">${avgcases}</div>
     `
@@ -134,7 +131,6 @@ const VerwerkData = function (data)
     `
 
     DOMnaam.innerHTML = htmlcodeNaam;
-    DOMacases.innerHTML = htmlcodeacases;
     DOMavgcases.innerHTML = htmlcodeavgcases;
     DOMavgcasesper.innerHTML = htmlcodeavgcasesper;
     DOMavgdeaths.innerHTML = htmlcodeavgdeaths;
@@ -178,6 +174,13 @@ const VerwerkData = function (data)
     
 }
 
+const getCases = function (datum,iso) {
+    handleData(
+        `https://covidapi.info/api/v1/country/${iso}/timeseries/${datum}/2021-08-16`,
+        verwerkCases
+    )
+}
+
 
 const getData = function (datum, iso){
     handleData(
@@ -189,12 +192,12 @@ const getData = function (datum, iso){
 const init = function(){
     isoland = "NLD";
     DOMnaam = document.getElementById('js-naam');
-    DOMacases = document.getElementById('js-a-cases');
     DOMavgcases = document.getElementById('js-avgcases');
     DOMavgcasesper = document.getElementById('js-avgcasesper');
     DOMavgdeaths = document.getElementById('js-avgdeaths');
     DOMavgdeathsper = document.getElementById('js-avgdeathsper');
     getData('2020-08-01',isoland);
+    getCases('2020-08-01',isoland);
     document.getElementById('js-m').addEventListener('click', function () {   
         getData('2021-07-15', isoland)
         //document.getElementById('loader-wrapper').style.display = "flex"; 
@@ -238,6 +241,7 @@ const init = function(){
     document.getElementById('js-bel').addEventListener('click', function() {
         isoland = "BEL";
         getData('2020-08-01', isoland);
+        getCases('2020-08-01', isoland);
         document.getElementById('js-y1').classList.remove('is-selected');
         document.getElementById('js-y1').classList.add('is-selected');
         document.getElementById('js-m').classList.remove('is-selected');
@@ -252,6 +256,7 @@ const init = function(){
     document.getElementById('js-nl').addEventListener('click', function() {
         isoland = "NLD";
         getData('2020-08-01', isoland);
+        getCases('2020-08-01', isoland);
         document.getElementById('js-y1').classList.remove('is-selected');
         document.getElementById('js-y1').classList.add('is-selected');
         document.getElementById('js-m').classList.remove('is-selected');
@@ -266,6 +271,7 @@ const init = function(){
     document.getElementById('js-deu').addEventListener('click', function() {
         isoland = "DEU";
         getData('2020-08-01', isoland);
+        getCases('2020-08-01', isoland);
         document.getElementById('js-y1').classList.remove('is-selected');
         document.getElementById('js-y1').classList.add('is-selected');
         document.getElementById('js-m').classList.remove('is-selected');
