@@ -510,7 +510,7 @@ h2 {
 
 	.c-app__amount .tooltip-pd {
 		visibility: hidden;
-		margin-left: 220px;
+		margin-right: 220px;
 		width: 100px;
 		background-color: black;
 		color: #fff;
