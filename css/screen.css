@@ -811,9 +811,10 @@ input::placeholder {
 
 	.c-landing {
 		display: grid;
-		max-width: 50%;
+		max-width: 60%;
 		margin: auto;
-		grid-template-columns: 500px 1fr;
+		padding-left: 170px;
+		grid-template-columns: 600px 1fr;
 	}
 
 	.u-border-line {
