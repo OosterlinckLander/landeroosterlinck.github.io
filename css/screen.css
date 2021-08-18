@@ -1130,16 +1130,16 @@ No media query since this is the default in mobile first design
     -ms-transform: rotateX(20deg);
     transform: rotateX(20deg);
     background-color: var(--global-neutral-5-dark);
-    color: var(--global-neutral-color);
+    color: #a5d0e1;
     box-shadow: var(--shadow-button);
 }
 
 .c-link-cta:active {
     background-color: var(--global-neutral-5-dark);
-    color: var(--global-neutral-color);
+    color: #a5d0e1;
 }
 
 .is-selected {
     background-color: var(--global-neutral-5-dark);
-    color: var(--global-neutral-color);
+    color: #a5d0e1;
 }
