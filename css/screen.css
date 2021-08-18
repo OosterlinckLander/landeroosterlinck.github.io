@@ -608,7 +608,7 @@ input::placeholder {
 
 	.c-app__week {
 		display: grid;
-		grid-template-columns: 80px 1fr 1fr;
+		grid-template-columns: 70px 1fr 1fr;
 		grid-template-rows: 50px 50px 50px;
 		width: 85%;
 		justify-content: center;
