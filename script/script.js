@@ -240,6 +240,8 @@ const init = function(){
     })
     document.getElementById('js-bel').addEventListener('click', function() {
         isoland = "BEL";
+        document.getElementById('js-bel').classList.add('animated');
+        document.getElementById('js-bel').classList.add('bounce');
         getData('2020-08-01', isoland);
         getCases('2020-08-01', isoland);
         document.getElementById('js-y1').classList.remove('is-selected');
@@ -248,13 +250,20 @@ const init = function(){
         document.getElementById('js-m6').classList.remove('is-selected');
         document.getElementById('js-y2').classList.remove('is-selected');
         
-        document.getElementById('js-bel').classList.remove('is-selected-land')
-        document.getElementById('js-bel').classList.add('is-selected-land')
-        document.getElementById('js-nl').classList.remove('is-selected-land')
-        document.getElementById('js-deu').classList.remove('is-selected-land')
+        document.getElementById('js-bel').classList.remove('is-selected-land');
+        document.getElementById('js-bel').classList.add('is-selected-land');
+        document.getElementById('js-nl').classList.remove('is-selected-land');
+        document.getElementById('js-deu').classList.remove('is-selected-land');
+
+        setTimeout(() => {
+            document.getElementById('js-bel').classList.remove('animated');
+            document.getElementById('js-bel').classList.remove('bounce');;
+        }, 1100);
     })
     document.getElementById('js-nl').addEventListener('click', function() {
         isoland = "NLD";
+        document.getElementById('js-nl').classList.add('animated');
+        document.getElementById('js-nl').classList.add('bounce');
         getData('2020-08-01', isoland);
         getCases('2020-08-01', isoland);
         document.getElementById('js-y1').classList.remove('is-selected');
@@ -263,13 +272,20 @@ const init = function(){
         document.getElementById('js-m6').classList.remove('is-selected');
         document.getElementById('js-y2').classList.remove('is-selected');
 
-        document.getElementById('js-nl').classList.remove('is-selected-land')
-        document.getElementById('js-nl').classList.add('is-selected-land')
-        document.getElementById('js-bel').classList.remove('is-selected-land')
-        document.getElementById('js-deu').classList.remove('is-selected-land')
+        document.getElementById('js-nl').classList.remove('is-selected-land');
+        document.getElementById('js-nl').classList.add('is-selected-land');
+        document.getElementById('js-bel').classList.remove('is-selected-land');
+        document.getElementById('js-deu').classList.remove('is-selected-land');
+
+        setTimeout(() => {
+            document.getElementById('js-nl').classList.remove('animated');
+            document.getElementById('js-nl').classList.remove('bounce');;
+        }, 1100);
     })
     document.getElementById('js-deu').addEventListener('click', function() {
         isoland = "DEU";
+        document.getElementById('js-deu').classList.add('animated');
+        document.getElementById('js-deu').classList.add('bounce');
         getData('2020-08-01', isoland);
         getCases('2020-08-01', isoland);
         document.getElementById('js-y1').classList.remove('is-selected');
@@ -278,10 +294,15 @@ const init = function(){
         document.getElementById('js-m6').classList.remove('is-selected');
         document.getElementById('js-y2').classList.remove('is-selected');
 
-        document.getElementById('js-deu').classList.remove('is-selected-land')
-        document.getElementById('js-deu').classList.add('is-selected-land')
-        document.getElementById('js-nl').classList.remove('is-selected-land')
-        document.getElementById('js-bel').classList.remove('is-selected-land')
+        document.getElementById('js-deu').classList.remove('is-selected-land');
+        document.getElementById('js-deu').classList.add('is-selected-land');
+        document.getElementById('js-nl').classList.remove('is-selected-land');
+        document.getElementById('js-bel').classList.remove('is-selected-land');
+
+        setTimeout(() => {
+            document.getElementById('js-deu').classList.remove('animated');
+            document.getElementById('js-deu').classList.remove('bounce');;
+        }, 1050);
     })
 }
 
