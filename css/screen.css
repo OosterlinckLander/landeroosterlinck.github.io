@@ -72,7 +72,8 @@ html {
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: var(--color-alpha-dark);
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,62,121,1) 67%, rgba(0,31,255,1) 100%);
 }
 
 *,
@@ -609,7 +610,6 @@ input::placeholder {
 		display: grid;
 		grid-template-columns: 80px 1fr 1fr;
 		grid-template-rows: 50px 50px 50px;
-		background-color: var(--global-neutral-20-dark);
 		width: 85%;
 		justify-content: center;
 		align-items: center;
@@ -619,7 +619,7 @@ input::placeholder {
 	.c-app__leeg {
 		width: 100%;
 		height: 100%;
-		background:var(--color-alpha-dark);
+		background: none;
 		border-right: 2.5px solid var(--color-alpha);
 		border-bottom: 2.5px solid var(--color-alpha);
 	}
@@ -666,6 +666,7 @@ input::placeholder {
 		align-items: center;
 		width: 100%;
 		height: 100%;
+		background-color: var(--global-neutral-20-dark);
 		border-right: 1px solid var(--color-alpha);
 		border-bottom: 1px solid var(--color-alpha);
 	}
@@ -1110,7 +1111,7 @@ No media query since this is the default in mobile first design
     padding: calc(var(--global-baseline) * 2)  calc(var(--global-baseline) * 3)  calc(var(--global-baseline) * 2); 
     top: 0;
     background-color: transparent;
-    color: var(--global-neutral-dark);
+    color: var(--global-neutral-color);
     border-radius: calc(var(--root-radius) * 3);
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
