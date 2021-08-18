@@ -530,7 +530,7 @@ input::placeholder {
 		max-width: 90%;
 		margin: auto;
 		grid-template-columns: repeat(8, 1fr);
-		grid-template-rows: 80px 40px 32px 430px 40px 70px 180px 40px;
+		grid-template-rows: 90px 40px 32px 430px 40px 70px 180px 40px;
 		justify-content: center;
 		align-items: center;
 	}
