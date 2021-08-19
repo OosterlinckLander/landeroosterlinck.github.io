@@ -72,8 +72,7 @@ html {
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,62,121,1) 67%, rgba(0,31,255,1) 100%);
+	background-color: var(--color-alpha-dark) ;
 }
 
 *,
@@ -428,7 +427,8 @@ input::placeholder {
 */
 
 .is-selected-land {
-	border-bottom: 2px solid white;
+	border: 2px solid var(--global-neutral-light);
+	border-radius: 25px;
 }
 
 .c-app {
@@ -483,20 +483,14 @@ input::placeholder {
 }
 
 .c-app__img-bel:hover {
-	border-bottom: 2px solid var(--color-alpha);
-	padding-bottom: 1px;
 	cursor: pointer;
 }
 
 .c-app__img-nl:hover {
-	border-bottom: 2px solid var(--color-alpha);
-	padding-bottom: 1px;
 	cursor: pointer;
 }
 
 .c-app__img-deu:hover {
-	border-bottom: 2px solid var(--color-alpha);
-	padding-bottom: 1px;
 	cursor: pointer;
 }
 
@@ -730,8 +724,7 @@ input::placeholder {
 	}
 
 	.c-app__chart{
-		width: 300px;
-		margin: auto;
+		width: 360px;
 	}
 
 	.c-app__week {
@@ -1146,18 +1139,18 @@ No media query since this is the default in mobile first design
     -ms-transform: rotateX(20deg);
     transform: rotateX(20deg);
     background-color: var(--global-neutral-5-dark);
-    color: #a5d0e1;
+    color: var(--global-neutral-color);
     box-shadow: var(--shadow-button);
 }
 
 .c-link-cta:active {
     background-color: var(--global-neutral-5-dark);
-    color: #a5d0e1;
+    color: var(--global-neutral-color);
 }
 
 .is-selected {
     background-color: var(--global-neutral-5-dark);
-    color: #a5d0e1;
+    color: var(--global-neutral-color);
 }
 
 /*
